@@ -1,0 +1,23 @@
+{
+  "name": "honeymoonbridgeplatform",
+  "version": "0.1.0",
+  "description": "Honeymoon Bridge Platform",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marsgoat/HoneymoonBridgePlatform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marsgoat/HoneymoonBridgePlatform/issues"
+  },
+  "homepage": "https://github.com/Marsgoat/HoneymoonBridgePlatform#readme",
+  "devDependencies": {
+    "electron": "^17.1.2"
+  }
+}
