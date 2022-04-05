@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
 function createWindow() {
-  const win = new BrowserWindow({
+  const window = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -10,7 +10,7 @@ function createWindow() {
     },
   });
 
-  win.loadFile('./src/index.html');
+  window.loadFile('./src/index.html');
 }
 
 app.whenReady().then(() => {

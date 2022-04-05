@@ -1,10 +1,14 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector);
-    if (element) element.innerText = text;
-  };
+const {contextBridge, ipcRenderer} = require('electron');
+const {Game} = require("./game")
 
-  for (const dependency of ['chrome', 'node', 'electron']) {
-    replaceText(`${dependency}-version`, process.versions[dependency]);
+var game = new Game();
+
+contextBridge.exposeInMainWorld('game', {
+  InitGame: () => {
+    return [
+      game.GetPlayer1Cards(),
+      game.GetPlayer2Cards()
+    ];
+    
   }
 });
