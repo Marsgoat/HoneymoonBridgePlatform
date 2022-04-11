@@ -1,0 +1,33 @@
+.biddingContent{
+    display: flex;
+}
+
+.biddingBoard{
+    margin: 10px; 
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: aquamarine;
+}
+
+.biddingBoardHeader{
+    border-radius: 8px 8px 0 0;
+    padding: 3px 0;
+    height: 30px;
+    border-bottom: solid 1px;
+    font-size: 22px;
+    background-color: white;
+}
+
+.biddingBoardHeader > div{
+    display: inline-block;
+    margin: 0 10px;
+    width: 75px;
+    text-align: center;
+}
+
+.biddingBoardBody{
+
+}

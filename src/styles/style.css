@@ -1,0 +1,9 @@
+#board {
+    height: 200px;
+}
+.userBoard {
+    height: 20%;
+}
+.centerBoard {
+    height: 60%;
+}

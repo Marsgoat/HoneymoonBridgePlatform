@@ -5,13 +5,46 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/bidding.css">
     <title>Hello World!</title>
 </head>
 <body>
+    <div class="biddingContent">
+        <div class="biddingBoard">
+            <div class="biddingBoardHeader">
+                <div>
+                   Player1
+                </div>
+                <div>
+                    Player2
+                 </div>
+            </div>
+            <div class="biddingBoardBody">
+                <div class="biddingBoardBodyRaw">
+    
+                </div>
+            </div>
+        </div>
+        <div class="biddingLevel">
+            <button>Pass</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+        </div>
+    </div>
+    
     <button id="startGame">開始遊戲</button>
     <div id="board">
-        <div id="player1Board"></div>
-        <div id="player2Board"></div>
+        <div id="player1Board" class="userBoard"></div>
+        <div id="centerBoard" class="centerBoard">
+            <div class="biddingButton"></div>
+        </div>
+        <div id="player2Board" class="userBoard"></div>
     </div>
 </body>
 <script src="renderer.js"></script>
