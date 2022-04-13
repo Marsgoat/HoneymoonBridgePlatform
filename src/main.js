@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
 function createWindow() {
@@ -8,9 +8,20 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
+    show: false,
   });
 
   window.loadFile('./src/index.html');
+  buildMenu();
+
+  window.once('ready-to-show', () => {
+    window.show();
+  });
+}
+
+function buildMenu() {
+  const template = Menu.buildFromTemplate(require('./menu'));
+  Menu.setApplicationMenu(template);
 }
 
 app.whenReady().then(() => {
