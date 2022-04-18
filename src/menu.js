@@ -22,9 +22,7 @@ module.exports = [
       {
         label: 'Github',
         click: () => {
-          shell.openExternal(
-            'https://github.com/Marsgoat/HoneymoonBridgePlatform'
-          );
+          shell.openExternal('https://github.com/Marsgoat/HoneymoonBridgePlatform');
         },
       },
     ],
